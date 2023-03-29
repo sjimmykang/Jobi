@@ -1,10 +1,17 @@
 import './App.scss';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import Error from './Pages/Error';
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>tester text dev-branch</h1>
-    </div>
+    <>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='*' element={<Error />} />
+      </Routes>
+    </>
   );
 }
 
